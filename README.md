@@ -18,7 +18,7 @@
 Kodlarla uğraşmak istemiyorsanız, hazır derlenmiş sürümü indirebilirsiniz:
 
 1.  Bu sayfanın sağ tarafındaki **[Releases (Sürümler)](../../releases)** kısmına tıklayın.
-2.  En son sürümün altındaki **ZIP** dosyasını indirin.
+2.  En son sürümün altındaki **EXE** dosyasını indirin.
 
 > **Not:** Uygulama Windows Servislerini (`sc create`) yönettiği için **Yönetici İzni** şarttır.
 
