@@ -1,0 +1,7 @@
+discord.com
+discord.gg
+discordapp.com
+discordapp.net
+discord.media
+discord.co
+discord-attachments-uploads-prd.storage.googleapis.com
