@@ -51,7 +51,7 @@ namespace DNSChangerApp
 
             if (isAutorun)
             {
-                btnAc_Click(null, null);
+                ServisBaslat();
                 BeginInvoke(new System.Windows.Forms.MethodInvoker(delegate
                 {
                     Hide();
@@ -179,6 +179,11 @@ namespace DNSChangerApp
 
         private void btnAc_Click(object sender, EventArgs e)
         {
+            ServisBaslat();
+        }
+
+        public void ServisBaslat()
+        {
             if (string.IsNullOrEmpty(exeYolu) || !File.Exists(exeYolu)) return;
 
             KomutCalistir("sc stop \"GoodbyeDPI\" && sc delete \"GoodbyeDPI\"");
@@ -188,7 +193,13 @@ namespace DNSChangerApp
 
             KomutCalistir(createCommand);
             KomutCalistir("sc start \"GoodbyeDPI\"");
+        }
 
+        private void btnSiteListesi_Click(object sender, EventArgs e)
+        {
+            string blacklistYolu = Path.Combine(hedefKlasor, "discord-blacklist.txt");
+            Form2 editor = new Form2(blacklistYolu);
+            editor.ShowDialog(this);
         }
 
         private void btnKapa_Click(object sender, EventArgs e)

@@ -21,6 +21,7 @@ namespace DNSChangerApp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnAc = new Button();
             btnKapa = new Button();
+            btnSiteListesi = new Button();
             notifyIcon1 = new NotifyIcon(components);
             contextMenuStrip1 = new ContextMenuStrip(components);
             açToolStripMenuItem = new ToolStripMenuItem();
@@ -40,9 +41,9 @@ namespace DNSChangerApp
             btnAc.FlatStyle = FlatStyle.Flat;
             btnAc.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold);
             btnAc.ForeColor = Color.White;
-            btnAc.Location = new Point(12, 145);
+            btnAc.Location = new Point(12, 105);
             btnAc.Name = "btnAc";
-            btnAc.Size = new Size(460, 90);
+            btnAc.Size = new Size(460, 80);
             btnAc.TabIndex = 0;
             btnAc.Text = "Aç";
             btnAc.UseVisualStyleBackColor = false;
@@ -55,13 +56,28 @@ namespace DNSChangerApp
             btnKapa.FlatStyle = FlatStyle.Flat;
             btnKapa.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold);
             btnKapa.ForeColor = Color.White;
-            btnKapa.Location = new Point(12, 241);
+            btnKapa.Location = new Point(12, 191);
             btnKapa.Name = "btnKapa";
-            btnKapa.Size = new Size(460, 90);
+            btnKapa.Size = new Size(460, 80);
             btnKapa.TabIndex = 1;
             btnKapa.Text = "Kapa";
             btnKapa.UseVisualStyleBackColor = false;
             btnKapa.Click += btnKapa_Click;
+            // 
+            // btnSiteListesi
+            // 
+            btnSiteListesi.BackColor = Color.FromArgb(88, 101, 242);
+            btnSiteListesi.FlatAppearance.BorderSize = 0;
+            btnSiteListesi.FlatStyle = FlatStyle.Flat;
+            btnSiteListesi.Font = new Font("Segoe UI Semibold", 13.5F, FontStyle.Bold);
+            btnSiteListesi.ForeColor = Color.White;
+            btnSiteListesi.Location = new Point(12, 290);
+            btnSiteListesi.Name = "btnSiteListesi";
+            btnSiteListesi.Size = new Size(460, 65);
+            btnSiteListesi.TabIndex = 4;
+            btnSiteListesi.Text = "📝 Site Listesi";
+            btnSiteListesi.UseVisualStyleBackColor = false;
+            btnSiteListesi.Click += btnSiteListesi_Click;
             // 
             // notifyIcon1
             // 
@@ -122,7 +138,7 @@ namespace DNSChangerApp
             chkBaslangic.AutoSize = true;
             chkBaslangic.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
             chkBaslangic.ForeColor = Color.LightGray;
-            chkBaslangic.Location = new Point(139, 483);
+            chkBaslangic.Location = new Point(139, 513);
             chkBaslangic.Name = "chkBaslangic";
             chkBaslangic.Size = new Size(233, 29);
             chkBaslangic.TabIndex = 3;
@@ -142,15 +158,16 @@ namespace DNSChangerApp
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 46);
-            ClientSize = new Size(484, 561);
+            ClientSize = new Size(484, 600);
             Controls.Add(chkBaslangic);
+            Controls.Add(btnSiteListesi);
             Controls.Add(lblDurum);
             Controls.Add(btnKapa);
             Controls.Add(btnAc);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            MaximumSize = new Size(500, 600);
-            MinimumSize = new Size(500, 600);
+            MaximumSize = new Size(500, 640);
+            MinimumSize = new Size(500, 640);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DNSChanger";
@@ -175,5 +192,6 @@ namespace DNSChangerApp
         private Label lblDurum;
         private CheckBox chkBaslangic;
         private System.Windows.Forms.Timer timer1;
+        private Button btnSiteListesi;
     }
 }
